@@ -1,0 +1,26 @@
+#Local MongoDB config
+spring:
+  data:
+    mongodb:
+      database: sample_mflix
+      uri: mongodb+srv://admin:tham5497@javagraphql.ktshy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+  application:
+    name: java-graphql
+
+server:
+  http2:
+    enabled: true
+  port: 8089
+
+
+graphql:
+  servlet:
+    maxQueryDepth: 100
+#  playground:
+#    headers:
+#      Authorization: Bearer TOKEN
+#    tabs:
+#      - name: Movie sample query
+#        query: classpath:playground/movie.graphqls
+#        variables: classpath:playground/movie_variables.json

@@ -1,0 +1,10 @@
+type Mutation{
+    createMovie(input : MovieCreateMovieInput!) : Movie!
+}
+
+input MovieCreateMovieInput {
+    plot: String!
+    runtime: Int!
+    year: Int!
+    title: String!
+}

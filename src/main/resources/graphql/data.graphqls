@@ -1,0 +1,53 @@
+schema {
+    query: Query
+}
+
+type Query {
+    movies: [Movie]
+    moviesPaging(page: Int, size: Int): [Movie]
+    movie(id: String!): Movie
+    users: [User]
+    usersPaging(page: Int, size: Int): [User]
+    user(id: String!): User
+}
+
+type Movie {
+    id: ID
+    plot: String
+    runtime: Int
+    num_mflix_comments: Int
+    year: Int
+    title: String
+    lastupdated: String
+    fullPlot: String
+    countries: [String]
+    cast: [String]
+    genres: [String]
+    released: String
+    tomatoes : Tomato
+    imdb: IMBM
+}
+
+type Tomato {
+    lastUpdated : String!
+    viewer: Viewer
+}
+
+type Viewer {
+    rating: Float!
+    numReviews: Int!
+    meter: Int!
+}
+
+type IMBM {
+    id: String!
+    rating: Float!
+    votes: Int!
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    password: String!
+}
